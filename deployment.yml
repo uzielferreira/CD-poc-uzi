@@ -1,0 +1,26 @@
+#Qual a versão de API do objeto que será usado no Kubernetes para criar esse objeto.
+apiVersion: apps/v1
+
+#Qual tipo de objeto pretende criar.
+kind: Deployment
+
+#Dados que ajudam a identificar de forma única o objeto, incluindo uma string nome, UID e um namespace
+metadata:
+  name: site-poc-uzi
+
+#Que estado deseja para o objeto.
+spec:
+  selector:
+    matchLabels:
+      app: site-poc-uzi-ml-app
+  replicas: 2 # diz ao deployment para executar 2 pods que correspondam ao modelo
+  template:
+    metadata:
+      labels:
+        app: site-poc-uzi-tp-app
+    spec:
+      containers:
+      - name: site-poc-uzi-container
+        image: uzieljr/poc-site:blue-01
+        ports:
+        - containerPort: 8070
