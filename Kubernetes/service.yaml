@@ -7,5 +7,5 @@ spec:
   selector:
     app: site-poc
   ports:
-  - port: 8070
-    targetPort: 80
+  - port: 80
+    targetPort: 8070
