@@ -8,3 +8,4 @@ spec:
     app: site-poc
   ports:
   - port: 8070
+    targetPort: 80
