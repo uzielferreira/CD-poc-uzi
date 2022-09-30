@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/vlalpha1
+apiVersion: v1
 kind: Application
 metadata:
   name: site-poc-uzi
