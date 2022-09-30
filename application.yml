@@ -1,20 +1,20 @@
-apiVersion: v1
-items:
-- apiVersion: argoproj.io/v1alpha1
-  kind: Application
-  metadata:
-    name: poc-site-blu-green
-    namespace: argocd
-  spec:
-    destination:
-      namespace: default
-      server: https://kubernetes.default.svc
-    project: default
-    source:
-      path: Kubernetes
-      repoURL: https://github.com/uzielferreira/CD-poc-uzi.git
-      targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
+apiVersion: argoproj.io/vlalpha1
+kind: Application
+metadata:
+  name: site-poc-uzi
+  namespace: uzi-space
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: CD-poc-uzi/Kubernetes
+    repoURL: https://github.com/uzielferreira/CD-poc-uzi
+    targetRevision: HEAD
+  syncPolicy:   
+    syncOptions:
+      - CreateNameSpace=true
+    automated:
+      selfHeal: true
+      prune: true
