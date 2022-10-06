@@ -2,10 +2,10 @@ apiVersion: argoproj.io/vlalpha1
 kind: Application
 metadata:
   name: site-poc-uzi
-  namespace: uzi-space
+  namespace: argocd
 spec:
   destination:
-    namespace: default
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   source:
