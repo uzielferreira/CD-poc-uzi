@@ -9,8 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: CD-poc-uzi/Kubernetes
-    repoURL: https://github.com/uzielferreira/CD-poc-uzi
+    path: Kubernetes
+    repoURL: https://github.com/uzielferreira/CD-poc-uzi.git
     targetRevision: HEAD
   syncPolicy:   
     syncOptions:
