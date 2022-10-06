@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: site-poc-uzi
-        image: uzieljr/poc-site:blue-01
+        image: uzieljr/poc-site:green-01
         ports:
         - containerPort: 80
