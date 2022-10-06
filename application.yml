@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: site-poc-uzi
-  namespace: uzi-space
+  namespace: argocd
 spec:
   destination:
     namespace: uzi-space
