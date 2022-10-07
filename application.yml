@@ -16,7 +16,7 @@ spec:
     helm:
       releaseName: site-poc-uzi
       valueFiles:
-        - values.yml
+        - "values.yml"
   syncPolicy:   
  #   syncOptions:
  #     - CreateNameSpace=true
