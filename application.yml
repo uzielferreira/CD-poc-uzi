@@ -15,7 +15,7 @@ spec:
      values: |
        pushgateway:
          enabled: false
-   repoURL: https://github.com/uzielferreira/CD-poc-uzi.git  
+   repoURL: https://github.com/uzielferreira/CD-poc-uzi
    targetRevision: 15.6.0       
 
 #Source para argo sem helm
