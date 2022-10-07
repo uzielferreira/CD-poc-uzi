@@ -8,21 +8,15 @@ spec:
     namespace: uzi-space-dev
     server: https://kubernetes.default.svc
   project: default
-
+  
   source:
-   chart: uzi-helm-chart
-   helm:
-     values: |
-       pushgateway:
-         enabled: false
-   repoURL: https://github.com/uzielferreira/CD-poc-uzi
-   targetRevision: 15.6.0       
-
-#Source para argo sem helm
-#  source:
-#    path: Kubernetes
-#    repoURL: https://github.com/uzielferreira/CD-poc-uzi.git
-#    targetRevision: HEAD
+    path: uzi-helm-chart
+    repoURL: https://github.com/uzielferreira/CD-poc-uzi.git
+    targetRevision: HEAD
+    helm:
+      releaseName: site-poc-uzi
+      valueFiles:
+        - values.yml
   syncPolicy:   
  #   syncOptions:
  #     - CreateNameSpace=true
