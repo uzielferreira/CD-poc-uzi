@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: default
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   
@@ -16,7 +16,7 @@ spec:
     helm:
       releaseName: site-poc-uzi
       valueFiles:
-        - "values.yml"
+        - values.yaml
   syncPolicy:   
  #   syncOptions:
  #     - CreateNameSpace=true
