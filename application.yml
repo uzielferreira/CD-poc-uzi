@@ -3,19 +3,20 @@ kind: Application
 metadata:
   name: site-poc-uzi
   namespace: argocd
+
 spec:
   destination:
-    namespace: argocd
-    server: https://kubernetes.default.svc
-  project: default
-  
+    server: 'https://kubernetes.default.svc'
+    namespace: default  
+  project: default  
   source:
-    path: Kubernetes
-    repoURL: https://github.com/uzielferreira/CD-poc-uzi.git
+    repoURL: 'https://github.com/uzielferreira/CD-poc-uzi.git'
+    path: uzi-helm-chart
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
   syncPolicy:   
- #   syncOptions:
- #     - CreateNameSpace=true
     automated:
       selfHeal: true
       prune: true
