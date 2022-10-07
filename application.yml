@@ -10,13 +10,9 @@ spec:
   project: default
   
   source:
-    path: uzi-helm-chart
+    path: Kubernetes
     repoURL: https://github.com/uzielferreira/CD-poc-uzi.git
     targetRevision: HEAD
-    helm:
-      releaseName: site-poc-uzi
-      valueFiles:
-        - values.yaml
   syncPolicy:   
  #   syncOptions:
  #     - CreateNameSpace=true
