@@ -6,21 +6,21 @@ kind: Deployment
 
 #Dados que ajudam a identificar de forma única o objeto, incluindo uma string nome, UID e um namespace
 metadata:
-  name: site-poc-uzi
+  name: {{ .Release.Name }}-site-poc-uzi
 
 #Que estado deseja para o objeto.
 spec:
   selector:
     matchLabels:
-      app: site-poc-uzi
+      app: {{ .Release.Name }}-site-poc-uzi
   replicas: 2 # diz ao deployment para executar 2 pods que correspondam ao modelo
   template:
     metadata:
       labels:
-        app: site-poc-uzi
+        app: {{ .Release.Name }}-site-poc-uzi
     spec:
       containers:
-      - name: site-poc-uzi
+      - name: {{ .Release.Name }}-site-poc-uzi
         image: uzieljr/poc-site:blue-01
         ports:
         - containerPort: 80
