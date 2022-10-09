@@ -9,7 +9,7 @@ metadata:
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: uzi-space-dev
+    namespace: uzi-space
   project: default  
   source:
     repoURL: 'https://github.com/uzielferreira/CD-poc-uzi.git'
