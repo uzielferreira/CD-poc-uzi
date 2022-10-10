@@ -127,7 +127,7 @@ spec:
           {{- end }}
         ports:
         - name: http
-          containerPort: 80
+          containerPort: {{ .Values.server.httpPort }}
           protocol: TCP
         - name: https
           containerPort: 443
