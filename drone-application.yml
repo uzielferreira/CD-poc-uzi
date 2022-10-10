@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 
 metadata:
-  name: drone-uzi-poc
+  name: drone-poc
   namespace: argocd
 
 spec:
@@ -13,7 +13,7 @@ spec:
   project: default  
   source:
     repoURL: 'https://github.com/uzielferreira/CD-poc-uzi.git'
-    path: uzi-hel-drone
+    path: drone-helm-uzi
     targetRevision: HEAD
     helm:
       valueFiles:
