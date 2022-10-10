@@ -54,7 +54,7 @@ updateStrategy: {}
 
 service:
   type: ClusterIP
-  port: 8080
+  port: 8010
   annotations: {}
   nodePort:
 
@@ -68,7 +68,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: chart-example.local
+    - host: 8a8d-179-35-14-176.sa.ngrok.io
       paths:
         - path: /
           pathType: Prefix
@@ -186,14 +186,14 @@ env:
   ## The protocol to pair with the value in DRONE_SERVER_HOST (http or https).
   ## Ref: https://docs.drone.io/installation/reference/drone-server-proto/
   ##
-  DRONE_SERVER_PROTO: http
+  DRONE_SERVER_PROTO: https
 
   ## REQUIRED: Set the secret secret token that the Drone server and its Runners will use
   ## to authenticate. This is commented out in order to leave you the ability to set the
   ## key via a separately provisioned secret (see existingSecretName above).
   ## Ref: https://docs.drone.io/installation/reference/drone-rpc-secret/
   ##
-  # DRONE_RPC_SECRET:
+  DRONE_RPC_SECRET: 75ae36bfe5d80821d0921211d345782d
 
   ## If you'd like to use a DB other than SQLite (the default), set a driver + DSN here.
   ## Ref: https://docs.drone.io/installation/storage/database/
@@ -224,8 +224,8 @@ env:
   ## GitHub-specific variables. See the provider docs here:
   ## Ref: https://docs.drone.io/installation/providers/github/
   ##
-  # DRONE_GITHUB_CLIENT_ID:
-  # DRONE_GITHUB_CLIENT_SECRET:
+  DRONE_GITHUB_CLIENT_ID: 175c0b945d2b5cb8a2a6
+  DRONE_GITHUB_CLIENT_SECRET: 0f1152991c59be600e8e6138f284fba0c52e97bf
 
   ## GitLab-specific variables. See the provider docs here:
   ## Ref: https://docs.drone.io/installation/providers/gitlab/
