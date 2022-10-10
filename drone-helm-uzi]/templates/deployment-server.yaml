@@ -1,0 +1,26 @@
+#Qual a versão de API do objeto que será usado no Kubernetes para criar esse objeto.
+apiVersion: apps/v1
+
+#Qual tipo de objeto pretende criar.
+kind: Deployment
+
+#Dados que ajudam a identificar de forma única o objeto, incluindo uma string nome, UID e um namespace
+metadata:
+  name: drone-poc
+
+#Que estado deseja para o objeto.
+spec:
+  selector:
+    matchLabels:
+      app: drone-poc
+  replicas: 2 # diz ao deployment para executar 2 pods que correspondam ao modelo
+  template:
+    metadata:
+      labels:
+        app: drone-poc
+    spec:
+      containers:
+      - name: drone-poc
+        image: drone/drone
+        ports:
+        - containerPort: 80

@@ -13,7 +13,7 @@ spec:
   project: default  
   source:
     repoURL: 'https://github.com/uzielferreira/CD-poc-uzi.git'
-    path: drone-helm
+    path: uzi-hel-drone
     targetRevision: HEAD
     helm:
       valueFiles:
