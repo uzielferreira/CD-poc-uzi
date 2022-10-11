@@ -13,7 +13,7 @@ spec:
   project: default  
   source:
     repoURL: 'https://github.com/uzielferreira/CD-poc-uzi.git'
-    path: uzi-drone-helm/charts/drone-runner-docker
+    path: uzi-drone-helm/charts/drone-runner-kube
     targetRevision: HEAD
     helm:
 #      releaseName: drone-runer    
