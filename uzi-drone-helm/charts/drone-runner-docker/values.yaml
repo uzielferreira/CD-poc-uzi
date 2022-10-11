@@ -90,7 +90,7 @@ securityContext:
 
 service:
   type: ClusterIP
-  port: 8010
+  port: 80
 
 ingress:
   enabled: false
