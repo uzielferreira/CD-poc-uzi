@@ -100,7 +100,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: 8a8d-179-35-14-176.sa.ngrok.io
+    - host: chart-example.local
       paths:
         - path: /
           pathType: Prefix
@@ -163,9 +163,9 @@ env:
   ## service that the drone server Chart creates by default.
   ## Ref: https://docs.drone.io/runner/docker/configuration/reference/drone-rpc-host/
   ##
-  DRONE_RPC_HOST: 8a8d-179-35-14-176.sa.ngrok.io
+  DRONE_RPC_HOST: drone
 
   ## The protocol to use for communication with Drone server.
   ## Ref: https://docs.drone.io/runner/docker/configuration/reference/drone-rpc-proto/
   ##
-  DRONE_RPC_PROTO: https
+  DRONE_RPC_PROTO: http
