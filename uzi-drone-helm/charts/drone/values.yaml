@@ -10,6 +10,8 @@ image:
   tag: 2.12.1
   pullPolicy: IfNotPresent
 
+replicaCount: 2
+
 ## If you need to pull images from a private Docker image repository, pass in the name
 ## of a Kubernetes Secret that contains the needed secret. For more details, see:
 ## Ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/

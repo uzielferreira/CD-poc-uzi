@@ -13,7 +13,7 @@ imagePullSecrets: []
 ## For small or experimental deployments of the Kubernetes runner, 1 replica will suffice.
 ## For production cases, 2-3 are recommended. This does not grant additional parallelism,
 ## but does ensure that upgrades, config changes, and disruptions are handled more gracefully.
-replicaCount: 1
+replicaCount: 2
 
 ## When the runner receives a SIGTERM/SIGINT (config update, upgrade, etc), it will wait until
 ## all jobs that particular pod has spawned complete. It is for this reason that you'll want
