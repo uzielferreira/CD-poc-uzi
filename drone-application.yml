@@ -16,6 +16,7 @@ spec:
     path: uzi-drone-helm/charts/drone
     targetRevision: HEAD
     helm:
+      releaseName: drone-server
       valueFiles:
         - values.yaml
   syncPolicy:   

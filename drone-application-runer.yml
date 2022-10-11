@@ -16,6 +16,7 @@ spec:
     path: uzi-drone-helm/charts/drone-runner-docker
     targetRevision: HEAD
     helm:
+      releaseName: drone-runer    
       valueFiles:
         - values.yaml
   syncPolicy:   
