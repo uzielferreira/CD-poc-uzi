@@ -54,7 +54,7 @@ updateStrategy: {}
 
 service:
   type: ClusterIP
-  port: 8010
+  port: 80
   annotations: {}
   nodePort:
 
