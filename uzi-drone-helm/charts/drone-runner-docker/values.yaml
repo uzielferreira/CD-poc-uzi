@@ -90,7 +90,7 @@ securityContext:
 
 service:
   type: ClusterIP
-  port: 3000
+  port: 80
 
 ingress:
   enabled: false
@@ -163,7 +163,7 @@ env:
   ## service that the drone server Chart creates by default.
   ## Ref: https://docs.drone.io/runner/docker/configuration/reference/drone-rpc-host/
   ##
-  DRONE_RPC_HOST: drone
+  DRONE_RPC_HOST: 8a8d-179-35-14-176.sa.ngrok.io
 
   ## The protocol to use for communication with Drone server.
   ## Ref: https://docs.drone.io/runner/docker/configuration/reference/drone-rpc-proto/
