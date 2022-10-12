@@ -99,7 +99,7 @@ extraSecretNamesForEnvFrom: []
 ## namespaces.
 rbac:
   buildNamespaces:
-    - uzi-space
+    - drone-space
 
 ## If you require annotations on the drone-runner-kube service account declare them here.
 serviceAccount:
