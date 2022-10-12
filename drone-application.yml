@@ -1,3 +1,12 @@
+#######################################
+######    ARGO CD APPLICATION     #####
+#######################################
+
+
+##############################
+########    SERVER    ########
+##############################
+
 apiVersion: argoproj.io/v1alpha1
 
 kind: Application
@@ -23,7 +32,14 @@ spec:
     automated:
       selfHeal: true
       prune: true
+
+
 ---
+
+#############################
+########    RUNER    ########
+#############################
+
 apiVersion: argoproj.io/v1alpha1
 
 kind: Application
