@@ -33,6 +33,8 @@ spec:
     automated:
       selfHeal: true
       prune: true
+    syncOptions:
+      - PruneLast=true  
 
 
 ---
