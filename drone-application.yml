@@ -68,3 +68,35 @@ spec:
     automated:
       selfHeal: true
       prune: true      
+
+---
+
+#############################
+########    secret    #######
+#############################
+
+apiVersion: argoproj.io/v1alpha1
+
+kind: Application
+
+metadata:
+  name: drone-kubernetes-secrets
+  namespace: argocd
+
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: drone-space
+  project: default  
+  source:
+    repoURL: 'https://github.com/uzielferreira/CD-poc-uzi.git'
+    path: uzi-drone-helm/charts/drone-kubernetes-secrets
+    targetRevision: HEAD
+    helm:
+      #SreleaseName: drone-runer    
+      valueFiles:
+        - values.yaml
+  syncPolicy:   
+    automated:
+      selfHeal: true
+      prune: true   
