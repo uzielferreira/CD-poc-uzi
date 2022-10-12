@@ -59,7 +59,7 @@ spec:
     path: uzi-drone-helm/charts/drone-runner-kube
     targetRevision: HEAD
     helm:
-#      releaseName: drone-runer    
+      #SreleaseName: drone-runer    
       valueFiles:
         - values.yaml
   syncPolicy:   
