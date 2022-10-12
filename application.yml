@@ -18,7 +18,10 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-syncPolicy:
-  automated:
-    prune: true
-    selfHeal: true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
