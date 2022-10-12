@@ -5,6 +5,8 @@ kind: Application
 metadata:
   name: site-poc-uzi
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 
 spec:
   destination:
