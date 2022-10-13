@@ -25,3 +25,4 @@ spec:
         image: uzieljr/poc-site:{{ .Values.image.version }}
         ports:
         - containerPort: 80
+        
