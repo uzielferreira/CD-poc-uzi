@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: {{ .Release.Name }}-site-poc-uzi
-        image: uzieljr/poc-site:blue-01
+        image: uzieljr/poc-site:latest
         ports:
         - containerPort: 80
