@@ -1,2 +1,2 @@
-dockerimge:
+image:
   version: latest
