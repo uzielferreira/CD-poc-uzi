@@ -21,6 +21,7 @@ spec:
     spec:
       containers:
       - name: {{ .Release.Name }}-site-poc-uzi
-        image: uzieljr/poc-site:latest
+        imagePullPolicy: Always
+        image: uzieljr/poc-site: {{ .Values.docker_imge.version }}
         ports:
         - containerPort: 80
