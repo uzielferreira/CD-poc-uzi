@@ -15,7 +15,7 @@ spec:
   project: default  
   source:
     repoURL: 'https://github.com/uzielferreira/CD-poc-uzi.git'
-    path: uzi-helm-chart
+    path: site-helm
     targetRevision: HEAD
     helm:
       valueFiles:
