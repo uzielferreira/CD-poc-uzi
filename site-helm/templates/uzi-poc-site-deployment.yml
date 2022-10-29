@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Qual a versão de API do objeto que será usado no Kubernetes para criar esse objeto.
 apiVersion: apps/v1
 
@@ -27,3 +28,6 @@ spec:
         - containerPort: 80
         
         
+=======
+ed6ab21
+>>>>>>> f24df939c5c078ed001fcfdf128f0234c55ed16b
