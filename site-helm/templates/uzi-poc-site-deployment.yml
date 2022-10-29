@@ -24,4 +24,3 @@ spec:
         image: uzieljr/poc-site:${DRONE_COMMIT_SHA:0:7}
         ports:
         - containerPort: 80
-        
