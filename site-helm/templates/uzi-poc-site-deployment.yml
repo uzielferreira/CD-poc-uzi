@@ -21,6 +21,6 @@ spec:
       containers:
       - name: {{ .Release.Name }}-site-poc-uzi
         imagePullPolicy: Always
-        image: bf6610a
+        image: uzieljr/poc-site:${DRONE_COMMIT_SHA:0:7}
         ports:
         - containerPort: 80        
