@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-#Qual a versão de API do objeto que será usado no Kubernetes para criar esse objeto.
 apiVersion: apps/v1
 
 #Qual tipo de objeto pretende criar.
@@ -26,8 +24,3 @@ spec:
         image: uzieljr/poc-site:${DRONE_COMMIT_SHA:0:7}
         ports:
         - containerPort: 80
-        
-        
-=======
-ed6ab21
->>>>>>> f24df939c5c078ed001fcfdf128f0234c55ed16b
