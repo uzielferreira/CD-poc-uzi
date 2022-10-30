@@ -21,9 +21,11 @@ spec:
       valueFiles:
         - values.yaml
   syncPolicy:
-    automated:
+    automated: 
       prune: true
       selfHeal: true
+      allowEmpty: true
     syncOptions:
       - CreateNamespace=true
       - PruneLast=true
+      - Replace=true
