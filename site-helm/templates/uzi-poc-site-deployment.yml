@@ -13,6 +13,7 @@ spec:
     matchLabels:
       app: {{ .Release.Name }}-site-poc-uzi
   replicas: 2 # diz ao deployment para executar 2 pods que correspondam ao modelo
+  revisionHistoryLimit: 0 #quantos replicaset antigos deve ser mantidos
   template:
     metadata:
       labels:
