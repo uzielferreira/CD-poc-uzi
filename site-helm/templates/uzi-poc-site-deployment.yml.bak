@@ -21,6 +21,6 @@ spec:
       containers:
       - name: {{ .Release.Name }}-site-poc-uzi
         imagePullPolicy: Always
-        image: uzieljr/poc-site:ba56bfb
+        image: uzieljr/poc-site:4f505dc
         ports:
         - containerPort: 80        
