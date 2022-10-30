@@ -28,4 +28,4 @@ spec:
     syncOptions:
       - CreateNamespace=true
       - PruneLast=true
-      - Replace=true
+      #- Replace=true
